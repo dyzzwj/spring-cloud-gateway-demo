@@ -7,10 +7,8 @@ public interface MyResponseHandler extends MyHandler{
 
     /**
      * 处理响应
-     * @param body
+     * @param
      */
-    String handlerResponse(Object body);
+    String handlerResponse(String body);
 
-
-//    String handlerResponse(ResponseWrapper responseWrapper);
 }
