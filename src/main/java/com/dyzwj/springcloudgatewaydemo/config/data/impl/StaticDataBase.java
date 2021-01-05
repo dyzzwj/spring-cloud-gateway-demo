@@ -1,12 +1,14 @@
-package com.dyzwj.springcloudgatewaydemo.config.po;
+package com.dyzwj.springcloudgatewaydemo.config.data.impl;
 
+import com.dyzwj.springcloudgatewaydemo.config.data.DataBase;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class DataBase {
 
-    public static Map<String, Map<String,Object>> META_DATA = new HashMap<>();
+public class StaticDataBase implements DataBase {
+
+    public static Map<String, Object> META_DATA = new HashMap<>();
 
     static {
         Map<String,Object> ali = new HashMap<>();
@@ -22,5 +24,9 @@ public class DataBase {
         META_DATA.put("tencent",tencent);
     }
 
-
+    @Override
+    public Map<String, Object> getData() {
+        return META_DATA;
+    }
 }
+
